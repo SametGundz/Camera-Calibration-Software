@@ -1,0 +1,7 @@
+# config.yaml
+checkerboard:
+  rows: 8
+  columns: 6
+paths:
+  image_folder: "/home/samet/DMS-Mobilitas/camera-calibrator/data/input/checkerboard_8x6/"
+  output_folder: "/home/samet/DMS-Mobilitas/camera-calibrator/data/output/checkerboard_8x6/"
