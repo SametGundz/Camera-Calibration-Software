@@ -30,7 +30,7 @@ This software calculates the intrinsic and distortion parameters of a camera usi
 
 1. Clone the repository:
    ```bash
-   git clone <repo-link>
+   git clone https://github.com/SametGundz/Camera-Calibration-Software.git
 
 2. Build the Docker image:
    ```bash
