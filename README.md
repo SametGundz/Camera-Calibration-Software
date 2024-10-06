@@ -130,5 +130,14 @@ Alternatively, build and run the project using Docker for a consistent environme
 5. **Saving Results**: 
    - The calibration results, including the intrinsic and extrinsic matrices, distortion coefficients, and reprojection errors, are saved in a format that is compatible with C++ applications.
 
+### Checkerboard Shot Tips
+
+- **Checkerboard Size**: Ensure the correct number of rows and columns as configured in the `config.yaml`.
+- **Angles**: Capture images from various angles for more accurate calibration.
+- **Lighting**: Avoid shadows and reflections for better corner detection.
+- **Focus**: Ensure sharp focus on the checkerboard corners.
+- **Distance**: Vary the distance between the camera and the checkerboard.
+
+
 
 
