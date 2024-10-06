@@ -5,6 +5,7 @@
 This software calculates the intrinsic and distortion parameters of a camera using checkerboard images. It performs camera calibration, outputs reprojection errors, and saves the calibration results, including intrinsic matrix, distortion coefficients, extrinsic matrix, and correlation coefficients. The results are saved in a format that can be easily integrated into C++ applications.
 
 ## Table of Contents
+
 - [Usage](#usage)
 - [Prerequisites](#prerequisites)
 - [Running the Software](#running-the-software)
@@ -49,21 +50,23 @@ Checkerboard images (e.g., a 9x6 grid) should be stored in the `data/input` fold
 ### Example Output
 
 #### Intrinsic Matrix:
-```bash
-[[1000. 0. 640.]
- [0. 1000. 360.]
- [0. 0. 1.]]
- 
-#### Intrinsic Matrix:
+   ```bash
+   [[1000. 0. 640.]
+   [0. 1000. 360.]
+   [0. 0. 1.]]
+```
+
+#### Distortion Coefficients:
    ```bash
    [-0.1  0.01  0.  0.  0.]
+```
 
 #### Reprojection Error:
-
    ```bash
    Image 1: 0.08
    Image 2: 0.07
    Average: 0.075
+```
 
 #### Extrinsic Matrix and Correlation Coefficients:
 These will be saved in YAML format in the same folder as the input images, with a timestamp in the filename for session identification.
@@ -72,6 +75,7 @@ These will be saved in YAML format in the same folder as the input images, with 
 You can run the provided unit tests with:
    ```bash
    python unit_tests.py
+```
 
 ### Development Environment
 
@@ -79,6 +83,7 @@ You can run the provided unit tests with:
 Install Python dependencies by running:
    ```bash
    pip install -r requirements.txt
+```
 
 #### Docker Setup
 Alternatively, build and run the project using Docker for a consistent environment:
@@ -107,6 +112,7 @@ Alternatively, build and run the project using Docker for a consistent environme
    ├── README.md                  # Project documentation
    ├── requirements.txt           # Python dependencies
    └── calibration.log            # Log file for calibration process
+```
 
 #### Main Components
 1. **Image Loading**: 
