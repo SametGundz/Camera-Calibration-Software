@@ -54,4 +54,75 @@ Checkerboard images (e.g., a 9x6 grid) should be stored in the `data/input` fold
  [0. 1000. 360.]
  [0. 0. 1.]]
  
- 
+#### Intrinsic Matrix:
+   ```bash
+   [-0.1  0.01  0.  0.  0.]
+
+#### Reprojection Error:
+
+   ```bash
+   Image 1: 0.08
+   Image 2: 0.07
+   Average: 0.075
+
+#### Extrinsic Matrix and Correlation Coefficients:
+These will be saved in YAML format in the same folder as the input images, with a timestamp in the filename for session identification.
+
+### Unit Tests
+You can run the provided unit tests with:
+   ```bash
+   python unit_tests.py
+
+### Development Environment
+
+#### Python Setup
+Install Python dependencies by running:
+   ```bash
+   pip install -r requirements.txt
+
+#### Docker Setup
+Alternatively, build and run the project using Docker for a consistent environment:
+- Build the Docker image:
+   ```bash
+   docker build -t camera-calibrator .
+
+- Run the Docker container:
+   ```bash
+   docker run camera-calibrator
+
+### Archiecture
+
+#### Folder Structure
+   ```bash
+   camera-calibrator/
+   │
+   ├── data/
+   │   ├── input/                 # Checkerboard images
+   │   └── output/                # Calibration output
+   │
+   ├── calibrateCamera.py         # Main calibration script
+   ├── config.yaml                # Configuration file
+   ├── logger.py                  # Logger module for tracking
+   ├── Dockerfile                 # Docker setup
+   ├── README.md                  # Project documentation
+   ├── requirements.txt           # Python dependencies
+   └── calibration.log            # Log file for calibration process
+
+#### Main Components
+1. **Image Loading**: 
+   - The software reads images from the input folder specified in the `config.yaml` file. The folder contains the checkerboard images required for calibration.
+
+2. **Corner Detection**: 
+   - The software uses OpenCV's `findChessboardCorners` to detect the corners of the checkerboard pattern. It further refines the detected corners for improved accuracy.
+
+3. **Camera Calibration**: 
+   - The `calibrateCamera` function from OpenCV is used to calculate the camera's intrinsic parameters (such as focal length and optical center) and distortion coefficients.
+
+4. **Error Calculation**: 
+   - For each image, the software computes and logs the reprojection error, which indicates the accuracy of the calibration by measuring the difference between the projected points and the detected points.
+
+5. **Saving Results**: 
+   - The calibration results, including the intrinsic and extrinsic matrices, distortion coefficients, and reprojection errors, are saved in a format that is compatible with C++ applications.
+
+
+
