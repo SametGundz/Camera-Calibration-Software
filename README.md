@@ -79,13 +79,13 @@ You can run the provided unit tests with:
 
 ### Development Environment
 
-#### Python Setup
+### Python Setup
 Install Python dependencies by running:
    ```bash
    pip install -r requirements.txt
 ```
 
-#### Docker Setup
+### Docker Setup
 Alternatively, build and run the project using Docker for a consistent environment:
 - Build the Docker image:
    ```bash
@@ -95,9 +95,9 @@ Alternatively, build and run the project using Docker for a consistent environme
    ```bash
    docker run camera-calibrator
 
-### Archiecture
+## Archiecture
 
-#### Folder Structure
+### Folder Structure
    ```bash
    camera-calibrator/
    │
@@ -114,23 +114,19 @@ Alternatively, build and run the project using Docker for a consistent environme
    └── calibration.log            # Log file for calibration process
 ```
 
-#### Main Components
+### Main Components
 1. **Image Loading**: 
    - The software reads images from the input folder specified in the `config.yaml` file. The folder contains the checkerboard images required for calibration.
-
 2. **Corner Detection**: 
    - The software uses OpenCV's `findChessboardCorners` to detect the corners of the checkerboard pattern. It further refines the detected corners for improved accuracy.
-
 3. **Camera Calibration**: 
    - The `calibrateCamera` function from OpenCV is used to calculate the camera's intrinsic parameters (such as focal length and optical center) and distortion coefficients.
-
 4. **Error Calculation**: 
    - For each image, the software computes and logs the reprojection error, which indicates the accuracy of the calibration by measuring the difference between the projected points and the detected points.
-
 5. **Saving Results**: 
    - The calibration results, including the intrinsic and extrinsic matrices, distortion coefficients, and reprojection errors, are saved in a format that is compatible with C++ applications.
 
-### Checkerboard Shot Tips
+## Checkerboard Shot Tips
 
 - **Checkerboard Size**: Ensure the correct number of rows and columns as configured in the `config.yaml`.
 - **Angles**: Capture images from various angles for more accurate calibration.
