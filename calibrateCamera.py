@@ -27,8 +27,8 @@ objp = np.zeros((checkerboard_size[0] * checkerboard_size[1], 3), np.float32)
 objp[:, :2] = np.mgrid[0:checkerboard_size[0], 0:checkerboard_size[1]].T.reshape(-1, 2)
 
 # lists for store up 3d and 2d points
-objpoints = []  # 3D noktalar 
-imgpoints = []  # 2D noktalar 
+objpoints = []  # 3D points 
+imgpoints = []  # 2D points 
 
 reprojection_errors = []
 
@@ -83,7 +83,8 @@ for i in range(len(objpoints)):
     logger.info(f'Reprojection Error for image {i+1}: {error}')
 
 mean_error = np.mean(reprojection_errors)
-logger.info(f"Average Reprojection Error: {mean_error}")
+logger.info("\n===== Calibration Results =====")
+logger.info(f"Average Reprojection Error {mean_error}")
 logger.info(f"Intrinsic Matrix:\n {intrinsic_matrix}")
 logger.info(f"Distortion Coefficients:\n {distortion_coeff}")
 
