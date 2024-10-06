@@ -63,9 +63,16 @@ Checkerboard images (e.g., a 9x6 grid) should be stored in the `data/input` fold
 
 #### Reprojection Error:
    ```bash
-   Image 1: 0.08
-   Image 2: 0.07
-   Average: 0.075
+   Image 1: 0.0986
+   Image 2: 0.0916
+   Image 3: 0.0650
+   Image 4: 0.1004
+   Image 5: 0.0893
+   Image 6: 0.1287
+   Image 7: 0.0717
+   Image 8: 0.0800
+   Image 9: 0.0806
+   Average: 0.0895
 ```
 
 #### Extrinsic Matrix and Correlation Coefficients:
