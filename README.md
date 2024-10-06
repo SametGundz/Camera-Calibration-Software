@@ -51,14 +51,14 @@ Checkerboard images (e.g., a 9x6 grid) should be stored in the `data/input` fold
 
 #### Intrinsic Matrix:
    ```bash
-   [[1000. 0. 640.]
-   [0. 1000. 360.]
-   [0. 0. 1.]]
+   [[3.02104779e+03 0.00000000e+00 1.05585692e+03]
+ [0.00000000e+00 3.01540312e+03 1.91533035e+03]
+ [0.00000000e+00 0.00000000e+00 1.00000000e+00]]
 ```
 
 #### Distortion Coefficients:
    ```bash
-   [-0.1  0.01  0.  0.  0.]
+   [ 0.20947133 -1.09068132 -0.00310036 -0.00471262 2.85036049]
 ```
 
 #### Reprojection Error:
