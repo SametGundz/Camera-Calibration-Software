@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 COPY requirements.txt .
+COPY logger.py .
+COPY calibrateCamera.py .
+COPY config.yaml .
 COPY data ./data
-COPY README.md .
 
 RUN pip install --no-cache-dir -r requirements.txt
-
-COPY calibrateCamera.py .
 
 CMD ["python", "./calibrateCamera.py"]
