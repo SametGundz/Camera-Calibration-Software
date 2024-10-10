@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This software calculates the intrinsic and distortion parameters of a camera using checkerboard images. It performs camera calibration, outputs reprojection errors, and saves the calibration results, including intrinsic matrix, distortion coefficients, extrinsic matrix, and correlation coefficients. The results are saved in a format that can be easily integrated into C++ applications.
+This software calculates the intrinsic and distortion parameters of a camera using checkerboard images. It performs camera calibration, outputs reprojection errors, and saves the calibration results, including intrinsic matrix, distortion coefficients, extrinsic matrix, and correlation coefficients. The results are saved in a YAML format.
 
 ## Table of Contents
 
