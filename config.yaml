@@ -2,5 +2,5 @@ checkerboard:
   rows: 8
   columns: 6
 paths:
-  image_folder: "/app/data/input/checkerboard_8x6/"
-  output_folder: "/app/data/output/checkerboard_8x6/"
+  image_folder: "/app/data/input/"
+  output_folder: "/app/data/output/"
