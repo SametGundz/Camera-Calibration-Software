@@ -4,7 +4,7 @@ FROM python:3.8-slim
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Switch to root to install system packages
-USER root
+# USER root
 
 RUN apt-get update && apt-get install -y \
     python3-opencv \
@@ -14,15 +14,17 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Switch back to the non-root user
-USER devuser
-WORKDIR /home/devuser
+# Add a non-root user
+# RUN useradd -ms /bin/bash devuser
 
-COPY --chown=devuser:devuser requirements.txt ./
+# Switch back to the non-root user
+# USER devuser
+# WORKDIR /home/devuser
+
+COPY requirements.txt .
 COPY logger.py .
 COPY calibrateCamera.py .
 COPY config.yaml .
-COPY data /app/data
 
 RUN pip install --no-cache-dir -r requirements.txt
 

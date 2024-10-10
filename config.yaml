@@ -2,5 +2,5 @@ checkerboard:
   rows: 8
   columns: 6
 paths:
-  image_folder: "/home/samet/DMS-Mobilitas/camera-calibrator/data/input/"
-  output_folder: "/home/samet/DMS-Mobilitas/camera-calibrator/data/output/"
+  image_folder: "./data/input/"
+  output_folder: "./data/output/"
