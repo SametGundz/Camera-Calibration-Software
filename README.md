@@ -39,7 +39,7 @@ This software calculates the intrinsic and distortion parameters of a camera usi
 
 3. Run the Docker container:
    ```bash
-   docker run -v /path/to/your/input/data/:/app/input/ -v /path/to/yout/output/data/:/app/output/ camera-calibrator
+   docker run -v /path/to/your/input/data/:/app/input/ -v /path/to/yout/output/data/:/app/output/ -v /path/to/your/local/log/folder:/app/logs -it camera-calibrator
 
 The software automatically detects checkerboard corners in images, calibrates the camera, and logs the results.
 

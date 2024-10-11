@@ -29,6 +29,7 @@ COPY --chown=devuser:devuser README.md .
 COPY --chown=devuser:devuser logger.py .
 COPY --chown=devuser:devuser config.yaml .
 COPY --chown=devuser:devuser calibrateCamera.py .
+COPY --chown=devuser:devuser /logs/calibration.log .
 
 RUN pip install --no-cache-dir -r requirements.txt
 

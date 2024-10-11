@@ -6,7 +6,7 @@ def setup_logger():
     logger.setLevel(logging.INFO)
     
     # creating a handler to write log messages to a file
-    file_handler = logging.FileHandler('calibration.log')
+    file_handler = logging.FileHandler('/app/logs/calibration.log')
     file_handler.setLevel(logging.INFO)
     
     # creating a handler to output log messages to the console
