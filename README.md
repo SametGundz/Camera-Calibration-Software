@@ -103,7 +103,7 @@ To run this project in a containerized environment, you need Docker installed on
 After cloning the repository and navigating to the project folder, build the Docker image using the provided Dockerfile:
    ```bash
    docker build -t camera-calibrator -f .devcontainer/Dockerfile .
-```
+   ```
 Now that Docker is set up and the image is built, you can proceed with running the project as described in the "Running the Project" section.
 
 ## Archiecture
