@@ -93,12 +93,12 @@ To run this project in a containerized environment, you need Docker installed on
       ```bash
       sudo apt update
       sudo apt install docker.io
-   ```
+      ```
    - For MacOS/Windows: [Download Docker Desktop](https://www.docker.com/products/docker-desktop)
 2. Verify the Docker installation:
    ```bash
    docker --version
-```
+   ```
 3. Build the Docker image: 
 After cloning the repository and navigating to the project folder, build the Docker image using the provided Dockerfile:
    ```bash
