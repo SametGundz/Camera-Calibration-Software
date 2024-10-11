@@ -117,7 +117,7 @@ Now that Docker is set up and the image is built, you can proceed with running t
    │   └── output/                # Calibration output
    │
    ├── logs/
-   │   ├── calibration.log        # Log file for calibration process
+   │   └── calibration.log        # Log file for calibration process
    │
    ├── calibrateCamera.py         # Main calibration script
    ├── config.yaml                # Configuration file
