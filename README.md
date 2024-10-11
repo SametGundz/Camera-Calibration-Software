@@ -116,13 +116,15 @@ Now that Docker is set up and the image is built, you can proceed with running t
    │   ├── input/                 # Checkerboard images
    │   └── output/                # Calibration output
    │
+   ├── logs/
+   │   └── calibration.log        # Log file for calibration process
+   │
    ├── calibrateCamera.py         # Main calibration script
    ├── config.yaml                # Configuration file
    ├── logger.py                  # Logger module for tracking
    ├── Dockerfile                 # Docker setup
    ├── README.md                  # Project documentation
-   ├── requirements.txt           # Python dependencies
-   └── calibration.log            # Log file for calibration process
+   └── requirements.txt           # Python dependencies
 ```
 
 ### Main Components
