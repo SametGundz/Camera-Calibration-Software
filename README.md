@@ -35,17 +35,17 @@ This software calculates the intrinsic and distortion parameters of a camera usi
 
 2. Build the Docker image:
    ```bash
-   docker build -t camera-calibrator .
+   docker build -t camera-calibrator -f .devcontainer/Dockerfile .
 
 3. Run the Docker container:
    ```bash
-   docker run camera-calibrator
+   docker run -v /path/to/your/input/data/:/app/input/ -v /path/to/yout/output/data/:/app/output/ camera-calibrator
 
 The software automatically detects checkerboard corners in images, calibrates the camera, and logs the results.
 
 ### Example Input
 
-Checkerboard images (e.g., a 9x6 grid) should be stored in the `data/input` folder as defined in the `config.yaml`.
+Checkerboard images (e.g., an 8x6 grid) should be stored in the `input` folder mounted to `/app/input/`. For example:
 
 ### Example Output
 
@@ -78,13 +78,7 @@ Checkerboard images (e.g., a 9x6 grid) should be stored in the `data/input` fold
 #### Extrinsic Matrix and Correlation Coefficients:
 These will be saved in YAML format in the same folder as the input images, with a timestamp in the filename for session identification.
 
-### Unit Tests
-You can run the provided unit tests with:
-   ```bash
-   python unit_tests.py
-```
-
-### Development Environment
+## Development Environment
 
 ### Python Setup
 Install Python dependencies by running:
@@ -96,7 +90,8 @@ Install Python dependencies by running:
 Alternatively, build and run the project using Docker for a consistent environment:
 - Build the Docker image:
    ```bash
-   docker build -t camera-calibrator .
+   docker build -t camera-calibrator -f .devcontainer/Dockerfile .
+
 
 - Run the Docker container:
    ```bash

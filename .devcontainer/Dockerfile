@@ -3,8 +3,7 @@ FROM python:3.8-slim
 # Set non-interactive mode for apt-get to avoid prompts
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Switch to root to install system packages
-# USER root
+WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
     python3-opencv \
@@ -14,17 +13,22 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Add a non-root user
-# RUN useradd -ms /bin/bash devuser
+# devuser adında bir kullanıcı oluştur ve ona bir home dizini ver
+RUN useradd -m -d /home/devuser devuser
 
-# Switch back to the non-root user
-# USER devuser
-# WORKDIR /home/devuser
+# /app dizinine devuser için gerekli izinleri ver
+RUN chown -R devuser:devuser /app
 
-COPY requirements.txt .
-COPY logger.py .
-COPY calibrateCamera.py .
-COPY config.yaml .
+# devuser kullanıcısına geç
+USER devuser
+WORKDIR /app
+
+# Gerekli dosyaları devuser altında kopyala
+COPY --chown=devuser:devuser requirements.txt .
+COPY --chown=devuser:devuser README.md .
+COPY --chown=devuser:devuser logger.py .
+COPY --chown=devuser:devuser config.yaml .
+COPY --chown=devuser:devuser calibrateCamera.py .
 
 RUN pip install --no-cache-dir -r requirements.txt
 

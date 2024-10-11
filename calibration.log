@@ -99,3 +99,69 @@
 2024-10-10 14:24:17 - INFO - Distortion Coefficients:
  [[ 0.20947133 -1.09068132 -0.00310036 -0.00471262  2.85036049]]
 2024-10-10 14:24:17 - INFO - Extrinsic and intrinsic values saved to the file /workspaces/camera-calibrator/data/output/calibration_20241010_142417.yaml.
+2024-10-10 14:29:12 - INFO - 9 images found. Starting processing...
+2024-10-10 14:29:12 - INFO - Corners found: ./data/input/IMG_20241004_140959.jpg
+2024-10-10 14:29:12 - INFO - Corners found: ./data/input/IMG_20241004_140955.jpg
+2024-10-10 14:29:12 - INFO - Corners found: ./data/input/IMG_20241004_140939.jpg
+2024-10-10 14:29:12 - INFO - Corners found: ./data/input/IMG_20241004_141002.jpg
+2024-10-10 14:29:12 - INFO - Corners found: ./data/input/IMG_20241004_140957.jpg
+2024-10-10 14:29:12 - INFO - Corners found: ./data/input/IMG_20241004_140953.jpg
+2024-10-10 14:29:13 - INFO - Corners found: ./data/input/IMG_20241004_140937.jpg
+2024-10-10 14:29:13 - INFO - Corners found: ./data/input/IMG_20241004_140936.jpg
+2024-10-10 14:29:14 - INFO - Corners found: ./data/input/IMG_20241004_140932.jpg
+2024-10-10 14:29:14 - INFO - Starting camera calibration...
+2024-10-10 14:29:14 - INFO - Camera calibration completed.
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 1: 0.09858285204376464
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 2: 0.09161403101652847
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 3: 0.06499783244817087
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 4: 0.10043335367639228
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 5: 0.08931285003458589
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 6: 0.12866709326605433
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 7: 0.07168272226580212
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 8: 0.08001005894751032
+2024-10-10 14:29:14 - INFO - Reprojection Error for image 9: 0.08061689628450791
+2024-10-10 14:29:14 - INFO - 
+===== Calibration Results =====
+2024-10-10 14:29:14 - INFO - Average Reprojection Error 0.0895464099981463
+2024-10-10 14:29:14 - INFO - Intrinsic Matrix:
+ [[3.02104779e+03 0.00000000e+00 1.05585692e+03]
+ [0.00000000e+00 3.01540312e+03 1.91533035e+03]
+ [0.00000000e+00 0.00000000e+00 1.00000000e+00]]
+2024-10-10 14:29:14 - INFO - Distortion Coefficients:
+ [[ 0.20947133 -1.09068132 -0.00310036 -0.00471262  2.85036049]]
+2024-10-10 14:29:14 - INFO - Extrinsic and intrinsic values saved to the file ./data/output/calibration_20241010_142914.yaml.
+2024-10-10 14:29:18 - INFO - 0 images found. Starting processing...
+2024-10-10 14:29:18 - ERROR - No checkerboard corners found. Terminating the program.
+2024-10-10 18:48:47 - INFO - 0 images found. Starting processing...
+2024-10-10 18:48:47 - ERROR - No checkerboard corners found. Terminating the program.
+2024-10-10 18:48:59 - INFO - 9 images found. Starting processing...
+2024-10-10 18:48:59 - INFO - Corners found: ./data/input/IMG_20241004_140959.jpg
+2024-10-10 18:48:59 - INFO - Corners found: ./data/input/IMG_20241004_140955.jpg
+2024-10-10 18:48:59 - INFO - Corners found: ./data/input/IMG_20241004_140939.jpg
+2024-10-10 18:49:00 - INFO - Corners found: ./data/input/IMG_20241004_141002.jpg
+2024-10-10 18:49:00 - INFO - Corners found: ./data/input/IMG_20241004_140957.jpg
+2024-10-10 18:49:00 - INFO - Corners found: ./data/input/IMG_20241004_140953.jpg
+2024-10-10 18:49:00 - INFO - Corners found: ./data/input/IMG_20241004_140937.jpg
+2024-10-10 18:49:00 - INFO - Corners found: ./data/input/IMG_20241004_140936.jpg
+2024-10-10 18:49:01 - INFO - Corners found: ./data/input/IMG_20241004_140932.jpg
+2024-10-10 18:49:01 - INFO - Starting camera calibration...
+2024-10-10 18:49:01 - INFO - Camera calibration completed.
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 1: 0.09858285204376464
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 2: 0.09161403101652847
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 3: 0.06499783244817087
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 4: 0.10043335367639228
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 5: 0.08931285003458589
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 6: 0.12866709326605433
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 7: 0.07168272226580212
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 8: 0.08001005894751032
+2024-10-10 18:49:03 - INFO - Reprojection Error for image 9: 0.08061689628450791
+2024-10-10 18:49:03 - INFO - 
+===== Calibration Results =====
+2024-10-10 18:49:03 - INFO - Average Reprojection Error 0.0895464099981463
+2024-10-10 18:49:03 - INFO - Intrinsic Matrix:
+ [[3.02104779e+03 0.00000000e+00 1.05585692e+03]
+ [0.00000000e+00 3.01540312e+03 1.91533035e+03]
+ [0.00000000e+00 0.00000000e+00 1.00000000e+00]]
+2024-10-10 18:49:03 - INFO - Distortion Coefficients:
+ [[ 0.20947133 -1.09068132 -0.00310036 -0.00471262  2.85036049]]
+2024-10-10 18:49:03 - INFO - Extrinsic and intrinsic values saved to the file ./data/output/calibration_20241010_184903.yaml.
