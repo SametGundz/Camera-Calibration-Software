@@ -87,15 +87,24 @@ Install Python dependencies by running:
 ```
 
 ### Docker Setup
-Alternatively, build and run the project using Docker for a consistent environment:
-- Build the Docker image:
+To run this project in a containerized environment, you need Docker installed on your machine. Follow these steps to set up Docker:
+1. Install Docker:
+   - For Ubuntu:
+      ```bash
+      sudo apt update
+      sudo apt install docker.io
+   ```
+   - For MacOS/Windows: [Download Docker Desktop](https://www.docker.com/products/docker-desktop)
+2. Verify the Docker installation:
+   ```bash
+   docker --version
+```
+3. Build the Docker image: 
+After cloning the repository and navigating to the project folder, build the Docker image using the provided Dockerfile:
    ```bash
    docker build -t camera-calibrator -f .devcontainer/Dockerfile .
-
-
-- Run the Docker container:
-   ```bash
-   docker run camera-calibrator
+```
+Now that Docker is set up and the image is built, you can proceed with running the project as described in the "Running the Project" section.
 
 ## Archiecture
 
